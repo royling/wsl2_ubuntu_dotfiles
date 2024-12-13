@@ -42,7 +42,7 @@ main() {
   #cp ssh_config ~/.ssh/config
 
   # install essentials
-  sudo apt install -y build-essential procps curl file git
+  sudo apt install -y build-essential procps curl file git tmux
 
   setup_git
 
@@ -57,6 +57,9 @@ main() {
     touch $config_home/starship.toml
     source $HOME/.bashrc
   )
+
+  # tmux.conf
+  mkdir -p $config_home/tmux && cp tmux.conf $config_home/tmux/
 
   # Programming langs
   # Install Nvm (Node.js/npm)
